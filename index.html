@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Automação de Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Painel de Automação de Pedidos</h1>
+        
+        <div class="form-section">
+            <h2>Atualizar Status de Pedidos</h2>
+            <label for="orderId">ID do Pedido:</label>
+            <input type="text" id="orderId" placeholder="Digite o ID do Pedido">
+            
+            <label for="status">Novo Status:</label>
+            <select id="status">
+                <option value="processando">Processando</option>
+                <option value="enviado">Enviado</option>
+                <option value="em_transito">Em Trânsito</option>
+                <option value="entregue">Entregue</option>
+            </select>
+            
+            <button onclick="updateOrder()">Atualizar Pedido</button>
+        </div>
+        
+        <div class="messages-section">
+            <h2>Mensagens Enviadas</h2>
+            <ul id="messageLog"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
